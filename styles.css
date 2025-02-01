@@ -36,7 +36,7 @@ nav {
 /* Navigation List */
 #nav-list {
   list-style: none;
-  display: none; /* Hidden by default */
+  display: none; /* Hide by default */
   flex-direction: column;
   width: 100%;
   background-color: #444;
@@ -67,9 +67,34 @@ nav {
   color: #e37106;
 }
 
-/* Home Section */
-#home {
-  text-align: center;
+/* Mobile Styles for Navigation */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  #nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #444;
+    position: absolute;
+    top: 50px; /* Adjust based on your nav height */
+    left: 0;
+  }
+
+  #nav-list.active {
+    display: flex;
+  }
+
+  #nav-list li {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+/* Sections */
+section {
   padding: 2rem;
   margin: 1rem auto;
   max-width: 800px;
@@ -79,19 +104,9 @@ nav {
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-body.dark-mode #home {
+body.dark-mode section {
   background-color: #444;
   color: #f4f4f4;
-}
-
-/* Profile Image */
-.profile-image {
-  width: 150px; /* Adjust as needed */
-  height: 150px; /* Adjust as needed */
-  border-radius: 50%; /* Circular image */
-  object-fit: cover; /* Ensures the image fills the space without distortion */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
-  margin-bottom: 20px; /* Space below the image */
 }
 
 /* Headings */
@@ -104,6 +119,99 @@ body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3 {
   color: #f4f4f4;
+}
+
+/* Home Section */
+#home {
+  text-align: center;
+  padding: 20px;
+}
+
+#home img {
+  width: 150px; /* Smaller image for mobile */
+  height: auto;
+  border-radius: 50%; /* Optional: Makes the image circular */
+}
+
+#home h1 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+#home p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Project Cards */
+.project {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .project {
+  background-color: #555;
+  color: #f4f4f4;
+}
+
+body.dark-mode .project:hover {
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #e37106;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  background: #ff9a44;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-toggle:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* CTA Button */
@@ -131,48 +239,10 @@ body.dark-mode h3 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-/* Dark Mode Toggle Button */
-.dark-mode-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #e37106;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-  z-index: 1000; /* Ensure it's above other elements */
-}
-
-.dark-mode-toggle:hover {
-  background: #ff9a44;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-.dark-mode-toggle:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   /* Sections */
-  #home {
+  section {
     padding: 1rem;
     margin: 0.5rem;
   }
@@ -193,9 +263,8 @@ footer {
     font-size: 1rem;
   }
 
-  /* Profile Image */
-  .profile-image {
-    width: 120px; /* Smaller image for mobile */
-    height: 120px;
+  /* Hide Dark Mode Toggle on Mobile */
+  .dark-mode-toggle {
+    display: none;
   }
 }
