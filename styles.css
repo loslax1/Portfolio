@@ -27,44 +27,30 @@ nav {
   align-items: center;
 }
 
-/* Hamburger Menu Icon */
-.menu-icon {
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Navigation List */
-#nav-list {
+nav ul {
   list-style: none;
-  display: none; /* Hide by default */
-  flex-direction: column;
-  width: 100%;
-  background-color: #444;
-  position: absolute;
-  top: 50px; /* Adjust based on your nav height */
-  left: 0;
+  display: flex;
+  justify-content: space-around;
   margin: 0;
   padding: 0;
 }
 
-#nav-list.active {
-  display: flex; /* Show when active */
-}
-
-#nav-list li {
-  margin: 10px 0;
-  text-align: center;
-}
-
-#nav-list li a {
+nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-#nav-list li a:hover {
+nav a:hover {
   color: #e37106;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 /* Mobile Styles for Navigation */
@@ -93,20 +79,28 @@ nav {
   }
 }
 
-/* Sections */
-section {
-  padding: 2rem;
-  margin: 1rem auto;
-  max-width: 800px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, box-shadow 0.3s;
+/* Home Section */
+#home {
+  text-align: center;
+  padding: 20px;
 }
 
-body.dark-mode section {
-  background-color: #444;
-  color: #f4f4f4;
+/* Image Container */
+.image-container {
+  display: flex;
+  justify-content: center; /* Center images horizontally */
+  align-items: center; /* Center images vertically */
+  gap: 20px; /* Space between images */
+  margin-bottom: 20px; /* Space below the images */
+}
+
+/* Profile Images */
+.profile-image {
+  width: 150px; /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
+  border-radius: 50%; /* Circular images */
+  object-fit: cover; /* Ensures the image fills the space without distortion */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
 }
 
 /* Headings */
@@ -121,36 +115,45 @@ body.dark-mode h3 {
   color: #f4f4f4;
 }
 
-/* Home Section */
-#home {
-  text-align: center;
-  padding: 20px;
-}
-
-#home img {
-  width: 150px; /* Smaller image for mobile */
-  height: auto;
-  border-radius: 50%; /* Optional: Makes the image circular */
-}
-
-#home h1 {
-  font-size: 24px;
-  margin: 10px 0;
-}
-
-#home p {
-  font-size: 16px;
-  margin: 10px 0;
-}
-
+/* CTA Button */
 .cta-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
+  background: #e37106;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
   text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
+  margin-top: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  background: #ff9a44;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sections */
+section {
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode section {
+  background-color: #444;
+  color: #f4f4f4;
 }
 
 /* Project Cards */
@@ -215,31 +218,6 @@ footer {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* CTA Button */
-.cta-button {
-  background: #e37106;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-  display: inline-block;
-  margin-top: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.cta-button:hover {
-  background: #ff9a44;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-.cta-button:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   /* Sections */
@@ -262,5 +240,16 @@ footer {
 
   p {
     font-size: 1rem;
+  }
+
+  /* Image Container */
+  .image-container {
+    flex-direction: column; /* Stack images vertically on mobile */
+    gap: 10px; /* Reduce space between images */
+  }
+
+  .profile-image {
+    width: 120px; /* Smaller images for mobile */
+    height: 120px;
   }
 }
