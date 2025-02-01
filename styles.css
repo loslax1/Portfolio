@@ -73,13 +73,19 @@ nav {
   padding: 2rem;
   margin: 1rem auto;
   max-width: 800px;
+}
+
+/* Content Boxes */
+.content-box {
   background: #fff;
+  padding: 2rem;
+  margin: 1rem 0;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-body.dark-mode #home {
+body.dark-mode .content-box {
   background-color: #444;
   color: #f4f4f4;
 }
@@ -91,7 +97,6 @@ body.dark-mode #home {
   border-radius: 50%; /* Circular image */
   object-fit: cover; /* Ensures the image fills the space without distortion */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
-  margin-bottom: 20px; /* Space below the image */
 }
 
 /* Headings */
@@ -129,22 +134,6 @@ body.dark-mode h3 {
 .cta-button:active {
   transform: translateY(0);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Sections */
-section {
-  padding: 2rem;
-  margin: 1rem auto;
-  max-width: 800px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-body.dark-mode section {
-  background-color: #444;
-  color: #f4f4f4;
 }
 
 /* Footer */
@@ -188,9 +177,14 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   /* Sections */
-  section {
+  #home {
     padding: 1rem;
     margin: 0.5rem;
+  }
+
+  .content-box {
+    padding: 1rem;
+    margin: 0.5rem 0;
   }
 
   h1 {
