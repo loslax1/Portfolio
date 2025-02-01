@@ -22,32 +22,75 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav ul {
+/* Hamburger Menu Icon */
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Navigation List */
+#nav-list {
   list-style: none;
-  display: flex;
-  justify-content: space-around;
+  display: none; /* Hide by default */
+  flex-direction: column;
+  width: 100%;
+  background-color: #444;
+  position: absolute;
+  top: 50px; /* Adjust based on your nav height */
+  left: 0;
   margin: 0;
   padding: 0;
 }
 
-nav a {
+#nav-list.active {
+  display: flex; /* Show when active */
+}
+
+#nav-list li {
+  margin: 10px 0;
+  text-align: center;
+}
+
+#nav-list li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-nav a:hover {
+#nav-list li a:hover {
   color: #e37106;
 }
 
-/* Hamburger Menu Icon */
-.menu-icon {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
+/* Mobile Styles for Navigation */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  #nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #444;
+    position: absolute;
+    top: 50px; /* Adjust based on your nav height */
+    left: 0;
+  }
+
+  #nav-list.active {
+    display: flex;
+  }
+
+  #nav-list li {
+    margin: 10px 0;
+    text-align: center;
+  }
 }
 
 /* Sections */
@@ -76,6 +119,38 @@ body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3 {
   color: #f4f4f4;
+}
+
+/* Home Section */
+#home {
+  text-align: center;
+  padding: 20px;
+}
+
+#home img {
+  width: 150px; /* Smaller image for mobile */
+  height: auto;
+  border-radius: 50%; /* Optional: Makes the image circular */
+}
+
+#home h1 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+#home p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 /* Project Cards */
@@ -166,25 +241,6 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  /* Navigation Bar */
-  .menu-icon {
-    display: block;
-  }
-
-  #nav-list {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #nav-list.active {
-    display: flex;
-  }
-
-  nav a {
-    padding: 0.5rem 0;
-  }
-
   /* Sections */
   section {
     padding: 1rem;
@@ -207,6 +263,11 @@ footer {
     font-size: 1rem;
   }
 
+  /* Hide Dark Mode Toggle on Mobile */
+  .dark-mode-toggle {
+    display: none;
+  }
+}
   /* Hide Dark Mode Toggle on Mobile */
   .dark-mode-toggle {
     display: none;
