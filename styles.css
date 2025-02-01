@@ -90,7 +90,7 @@ nav a:hover {
   display: flex;
   justify-content: center; /* Center images horizontally */
   align-items: center; /* Center images vertically */
-  gap: 100px; /* Space between images */
+  gap: 20px; /* Space between images */
   margin-bottom: 20px; /* Space below the images */
 }
 
