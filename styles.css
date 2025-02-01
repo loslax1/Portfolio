@@ -201,6 +201,7 @@ footer {
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  z-index: 1000; /* Ensure it's above other elements */
 }
 
 .dark-mode-toggle:hover {
@@ -262,14 +263,3 @@ footer {
   p {
     font-size: 1rem;
   }
-
-  /* Hide Dark Mode Toggle on Mobile */
-  .dark-mode-toggle {
-    display: none;
-  }
-}
-  /* Hide Dark Mode Toggle on Mobile */
-  .dark-mode-toggle {
-    display: none;
-  }
-}
