@@ -92,7 +92,7 @@ nav a:hover {
   border-radius: 50%; /* Circular image */
   object-fit: cover; /* Ensures the image fills the space without distortion */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
-  margin-bottom: 15px; /* Space below the image */
+  margin-bottom: 20px; /* Space below the image */
 }
 
 /* Headings */
