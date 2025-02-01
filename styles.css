@@ -85,22 +85,14 @@ nav a:hover {
   padding: 20px;
 }
 
-/* Image Container */
-.image-container {
-  display: flex;
-  justify-content: left; /* Center images horizontally */
-  align-items: center; /* Center images vertically */
-  gap: 20px; /* Space between images */
-  margin-bottom: 20px; /* Space below the images */
-}
-
-/* Profile Images */
+/* Profile Image */
 .profile-image {
   width: 150px; /* Adjust as needed */
   height: 150px; /* Adjust as needed */
-  border-radius: 50%; /* Circular images */
+  border-radius: 50%; /* Circular image */
   object-fit: cover; /* Ensures the image fills the space without distortion */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+  margin-bottom: 20px; /* Space below the image */
 }
 
 /* Headings */
@@ -154,30 +146,6 @@ section {
 body.dark-mode section {
   background-color: #444;
   color: #f4f4f4;
-}
-
-/* Project Cards */
-.project {
-  background: #fff;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-body.dark-mode .project {
-  background-color: #555;
-  color: #f4f4f4;
-}
-
-body.dark-mode .project:hover {
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
 
 /* Footer */
@@ -242,14 +210,9 @@ footer {
     font-size: 1rem;
   }
 
-  /* Image Container */
-  .image-container {
-    flex-direction: column; /* Stack images vertically on mobile */
-    gap: 10px; /* Reduce space between images */
-  }
-
+  /* Profile Image */
   .profile-image {
-    width: 120px; /* Smaller images for mobile */
+    width: 120px; /* Smaller image for mobile */
     height: 120px;
   }
 }
