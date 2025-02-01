@@ -70,7 +70,18 @@ nav {
 /* Home Section */
 #home {
   text-align: center;
-  padding: 20px;
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode #home {
+  background-color: #444;
+  color: #f4f4f4;
 }
 
 /* Profile Image */
