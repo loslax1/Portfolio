@@ -130,7 +130,6 @@ body.dark-mode h3 {
 #home img {
   width: 150px; /* Smaller image for mobile */
   height: auto;
-  border-radius: 50%; /* Optional: Makes the image circular */
 }
 
 #home h1 {
