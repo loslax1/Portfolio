@@ -88,7 +88,7 @@ nav a:hover {
 /* Image Container */
 .image-container {
   display: flex;
-  justify-content: center; /* Center images horizontally */
+  justify-content: left; /* Center images horizontally */
   align-items: center; /* Center images vertically */
   gap: 20px; /* Space between images */
   margin-bottom: 20px; /* Space below the images */
