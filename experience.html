@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luis Carlos Hernandez III - Experience & Skills</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav>
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="page-title">Experience and Skills</div>
     <ul id="nav-list">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -20,9 +23,11 @@
   </nav>
 
   <!-- Experience & Skills Section -->
-  <section id="experience">
+  <section id="experience" data-aos="fade-up">
     <h2>Experience & Skills</h2>
-    <div class="project">
+
+    <!-- Order Selector at Sysco -->
+    <div class="project" data-aos="fade-up">
       <h3>Order Selector at Sysco</h3>
       <p><strong>Billings, MT | May 2024 - Jul 2024</strong></p>
       <ul>
@@ -32,7 +37,9 @@
         <li>Developed strong organizational skills by prioritizing tasks and managing multiple responsibilities.</li>
       </ul>
     </div>
-    <div class="project">
+
+    <!-- Stocking Associate at Walmart -->
+    <div class="project" data-aos="fade-up">
       <h3>Stocking Associate at Walmart</h3>
       <p><strong>Billings, MT | Jun 2021 - Aug 2022</strong></p>
       <ul>
@@ -41,7 +48,9 @@
         <li>Retrieved shopping carts and ensured timely completion of tasks across multiple departments.</li>
       </ul>
     </div>
-    <div class="project">
+
+    <!-- Pin Chaser at Sunset Bowling -->
+    <div class="project" data-aos="fade-up">
       <h3>Pin Chaser at Sunset Bowling</h3>
       <p><strong>Billings, MT | Jul 2020 - Feb 2021</strong></p>
       <ul>
@@ -49,14 +58,18 @@
         <li>Maintained bowling machines and resolved pin and ball jams quickly to minimize lane downtime.</li>
       </ul>
     </div>
-    <div class="project">
+
+    <!-- Ice Stacker at Polar Ice -->
+    <div class="project" data-aos="fade-up">
       <h3>Ice Stacker at Polar Ice</h3>
       <p><strong>Billings, MT | Mar 2018 - Jan 2019</strong></p>
       <ul>
         <li>Stacked and transported ice to various locations while adhering to product safety standards.</li>
       </ul>
     </div>
-    <div class="project">
+
+    <!-- Technical & Soft Skills -->
+    <div class="project" data-aos="fade-up">
       <h3>Technical & Soft Skills</h3>
       <ul>
         <li><strong>Programming Languages:</strong> HTML, Java, Python, SQL.</li>
@@ -64,6 +77,8 @@
         <li><strong>Other Skills:</strong> Dependable Team Player, Adaptability, Attention to Detail, Problem-Solving.</li>
       </ul>
     </div>
+
+    <a href="projects.html" class="cta-button">See My Projects</a>
   </section>
 
   <!-- Footer -->
@@ -74,6 +89,12 @@
   <!-- Dark Mode Toggle Button -->
   <button class="dark-mode-toggle">Dark Mode</button>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
-</html>
+</html>                       

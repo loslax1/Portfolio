@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luis Carlos Hernandez III - Home</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav>
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="page-title">Home</div>
     <ul id="nav-list">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -20,8 +23,8 @@
   </nav>
 
   <!-- Home Section -->
-  <section id="home">
-    <img src="332868357_863919388393742_3483137211280686434_n.jpg" alt="My Image" width="200">
+  <section id="home" data-aos="fade-up">
+    <img src="https://raw.githubusercontent.com/loslax1/Portfolio/main/332868357_863919388393742_3483137211280686434_n.jpg" alt="My Image" width="200">
     <h1>Hi, I'm Luis ‘Carlos’ Hernandez III</h1>
     <p>A Computer Science student at Benedictine University with a passion for problem-solving, teamwork, and technology.</p>
     <a href="about.html" class="cta-button">Learn More About Me</a>
@@ -35,6 +38,12 @@
   <!-- Dark Mode Toggle Button -->
   <button class="dark-mode-toggle">Dark Mode</button>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init(); // Initialize AOS
+  </script>
 </body>
 </html>

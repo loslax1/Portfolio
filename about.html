@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luis Carlos Hernandez III - About</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav>
-    <ul>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="page-title">About</div>
+    <ul id="nav-list">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="experience.html">Experience & Skills</a></li>
@@ -19,7 +23,7 @@
   </nav>
 
   <!-- About Section -->
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>
       I’m a dedicated and adaptable Computer Science student with a strong work ethic and a proven ability to collaborate effectively in both academic and professional environments. My experience spans technical roles, such as operating electric pallet jacks and maintaining equipment, as well as community service and volunteer work. I’m currently pursuing my Bachelor’s degree in Computer Science while balancing my passion for competitive D3 Lacrosse.
@@ -32,8 +36,9 @@
     </ul>
     <h3>Goals</h3>
     <p>
-      My goal is to leverage my technical skills and problem-solving abilities to contribute to innovative technology projects. I’m particularly interested in web development, data analysis, and cybersecurity.
+      My goal is to leverage my technical skills and problem-solving abilities to contribute to innovative technology projects. I’m particularly interested in web development, software engineering, and cybersecurity.
     </p>
+    <a href="experience.html" class="cta-button">View Experiences and Skills</a>
   </section>
 
   <!-- Footer -->
@@ -44,6 +49,12 @@
   <!-- Dark Mode Toggle Button -->
   <button class="dark-mode-toggle">Dark Mode</button>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

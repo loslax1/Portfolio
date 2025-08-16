@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luis Carlos Hernandez III - Contact</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav>
-    <ul>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="page-title">Contact</div>
+    <ul id="nav-list">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="experience.html">Experience & Skills</a></li>
@@ -19,7 +23,7 @@
   </nav>
 
   <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
     <p>Feel free to reach out to me via email or connect with me on LinkedIn!</p>
     <ul>
@@ -37,6 +41,12 @@
   <!-- Dark Mode Toggle Button -->
   <button class="dark-mode-toggle">Dark Mode</button>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
